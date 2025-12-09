@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupation Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+        .admin-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .admin-profile .info {
+            color: white;
+            font-size: 14px;
+            text-align: right;
+        }
+        .search-bar {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+        .card a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Here are the Information of the Different Types of Jobers</h1>
+    </header>
+
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>Electrician</h2>
+            <p>Help for House  Wiring, Electronic Devices Repairing and many Others</p>
+            <a href="jobberlist.html"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Doctor</h2>
+            <p>Diagnoses and treats illnesses, promoting health and wellness.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Teacher</h2>
+            <p>Educates students and inspires lifelong learning.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Builder</h2>
+            <p>Designs buildings and spaces, blending creativity with engineering.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Engineer</h2>
+            <p>Design the Houses and fix the budget of Houses</p>
+            <a href="displayengineer.php"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Chef</h2>
+            <p>Prepares delicious meals and creates culinary experiences.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Priest</h2>
+            <p>Doing wedding and different types of Puja, Worship etc.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Plumber</h2>
+            <p>Prepares the water pump and water supply instruments and pipes.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>House Worker</h2>
+            <p>Prepares delicious meals and clean the houses, wash the cooking things</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Painter</h2>
+            <p>Paint the houses walls and making the different design in walls.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Carpentar</h2>
+            <p>Making the Door and Windows in the houses</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+        <div class="card">
+            <h2>Catering</h2>
+            <p>Prepares delicious meals in the Different Occasions.</p>
+            <a href="#"><button>Open List</button></a>
+        </div>
+    </div>
+</body>
+</html>

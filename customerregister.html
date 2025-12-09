@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            margin-top: 50px;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border: 4px solid transparent;
+            align-self: start;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: yellow;
+            color: black;
+        }
+        .form-container {
+            background-color: aqua;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 4px solid blue;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: blue;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+        h2{
+            color: black;
+            font-size: 30px;
+            background-color: transparent;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>REGISTER FORM FOR CUSTOMERS</h2>
+    <form action="customerregister.php" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+            
+                <th><label for="firstname">First Name:</label></th>
+                <td><input type="text" id="firstname" name="firstname" required></td>
+    
+                <th><label for="lastname">Last Name:</label></th>
+                <td><input type="text" id="lastname" name="lastname" required></td>
+            </tr>
+            <tr>
+                <th><label for="phone">Phone:</label></th>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            
+                <th><label for="email">Email:</label></th>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <th><label for="address">Address:</label></th>
+                <td><textarea id="address" name="address"  required></textarea></td>
+                
+                <th><label for="password">Password:</label></th>
+                <td><input type="password" id="password" name="password" required></td>
+
+            </tr>
+            <tr>
+                <td colspan="8" style="text-align: center; padding-top: 20px;">
+                    <input  style="color: blue; width: 100%; font-size: 40px; background-color: aliceblue;"  type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

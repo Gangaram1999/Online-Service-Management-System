@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid #34495e;
+        }
+        .sidebar a:hover {
+            background: #34495e;
+        }
+        /* Sub-menu */
+        .sub-menu {
+            display: none;
+            background: #34495e;
+            padding-left: 30px;
+        }
+        .sub-menu a {
+            font-size: 16px;
+            padding: 10px;
+        }
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+            background: #f4f4f4;
+        }
+        .dashboard-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .card {
+            width: 45%;
+            padding: 20px;
+            background: lightblue;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background: #2c3e50;
+            color: white;
+        }
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a>Dashboard Files</a>
+
+        <a href="javascript:void(0);" onclick="toggleSubMenu('applicationMenu')">Request</a>
+        <div id="applicationMenu" class="sub-menu">
+            <a href="2.php">Accepted Request</a>
+            <a href="3.php">Rejected Request</a>
+        </div>
+
+        <!-- Jobbers -->
+        <a href="javascript:void(0);" onclick="toggleSubMenu('jobbersMenu')">Jobbers</a>
+        <div id="jobbersMenu" class="sub-menu">
+            <a href="displayjob.php">Registered New Jobber</a>
+            <a href="activatedjobber.php">All Actice Jobbers</a>
+            <a href="addjobber.php">Accept Jobbers Information</a>
+            <a href="removejobber.php">Reject Jobber Information</a>
+        </div>
+
+        <!-- Customers -->
+        <a href="javascript:void(0);" onclick="toggleSubMenu('customersMenu')">Customers</a>
+        <div id="customersMenu" class="sub-menu">
+            <a href="displaycustomer.php">Registered New Customer</a>
+            <a href="activatecustomer.php">All Active Customer</a>
+            <a href="displaycustomerdetails.php">Accepted Customer Information</a>
+            <a href="removecustomer.php">Rejected Customer Information</a>
+        </div>
+        <div>
+        <a href="logout.php">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Admin Dashboard</h2>
+     
+
+    </div>
+
+    <script>
+
+        // Display Total Counts
+        document.getElementById("jobbersCount").innerText = jobbers.length;
+        document.getElementById("customersCount").innerText = customers.length;
+
+        // Toggle sub-menu visibility
+        function toggleSubMenu(menuId) {
+            const menu = document.getElementById(menuId);
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

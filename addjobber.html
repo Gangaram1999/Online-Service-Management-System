@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Jobbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border: 5px solid transparent;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: yellow;
+            color: black;
+        }
+        .form-container {
+            background-color: aqua;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 4px solid blue;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h2{
+            color: black;
+            font-size: 30px;
+            background-color: transparent;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Enter Information of Jobbers</h2>
+    <form action="addjoberconnection.php" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th><label for="profilePicture">Profile Picture:</label></th>
+                <td><input type="file" id="profilePicture" name="profilePicture" accept="image/*" required></td>
+            
+            
+                <th><label for="firstName">First Name:</label></th>
+                <td><input type="text" id="firstName" name="firstName" required></td>
+            </tr>
+            <tr>
+                <th><label for="lastName">Last Name:</label></th>
+                <td><input type="text" id="lastName" name="lastName" required></td>
+           
+                <th><label for="phone">Phone:</label></th>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+
+                    <th><label for="occupation">Occupation:</label></th>
+                    <td><input type="text" id="occupation" name="occupation" required></td>
+
+                    <th><label for="experience">Experience:</label></th>
+                    <td><input type="text" id="experience" name="experience" required></td>
+          
+
+            </tr>
+            <tr>
+                      
+                <th><label for="rate">Per Day Rate</label></th>
+                <td><input type="text" id="rate" name="rate" required></input></td>
+
+      
+            </tr>
+            <tr>
+                <td colspan="8" style="text-align: center; padding-top: 20px;">
+                    <input  style="color: blue; width: 100%; font-size: 40px; background-color: aliceblue;"  type="submit" value="ADD JOBBERS">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
